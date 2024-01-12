@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;700&display=swap');        :root {
+            --first-color: #FCF8F8;
+            --second-color: #B71010;
+            --third-color: #005C8B;
+            --four-color: #008A00;
+            --five-color: #000000;
+            --six-color: #B64646;
+            --seven-color: #BDE8F4;
+            --eight-color: #EEA1A1;
+        }
+        body {
+            font-family: 'Lato', sans-serif;
+            height: 100vh;
+            margin: 0;
+            overflow: auto;
+        }
+        .navbar {
+            grid-area: nav;
+            display: flex;
+        }
+        .navbar_content {
+            display: flex;
+            align-items: center;
+            width: 100%;
+            padding: 0 0 0 0;
+
+            animation: 2s navbar 0.5s ease-in-out;
+        }
+        @keyframes navbar {
+            0% {
+                transform: translateY(-200px);
+            }
+            100% {
+                transform: translateY(0px);
+            }
+        }
+        .navbar_content img {
+            width: 150px;
+        }
+        .navbar_content ul {
+            display: flex;
+            justify-content: space-evenly;
+            list-style: none;
+            padding: 0;
+            width: 1230px;
+        }
+        .navbar_content ul a {
+            text-decoration: none;
+            font-weight: 300;
+            color: var(--five-color);
+            border: 1px solid var(--five-color);
+            padding: 0.5rem;
+            border-radius: 15px;
+
+            transition: all 0.5s ease-out;
+        }
+        a:hover,
+        a:focus {
+            background-color: var(--seven-color);
+            color: var(--five-color);
+        }
+        .about-us {
+            position: absolute;
+            flex-direction: column;
+            padding-left: 150px;
+            padding-top: 205px;
+            z-index: 3;
+        }
+        .image2 {
+            position: relative;
+            top: 136px;
+
+        }
+        .container-1 {
+            width: 821px;
+            height: 45px;
+            background-color: var(--second-color);
+            position: relative;
+            top: 86px;
+        }
+        .container-2 {
+            width: 1285px;
+            height: 45px;
+            background-color: var(--six-color);
+            position: relative;
+            top: 186px;
+        }
+        .about-us h1 {
+            font-size: 48px;
+            display: flex;
+            justify-content: center;
+            margin: 0 0 0 0px;            
+        }
+        .about-us p {
+            font-size: 24px;
+            position: relative;
+            top: 56px;
+        } 
+        .about-us p:last-child {
+            margin: 0;
+        }
+        .container-3 {
+            position: relative;
+
+
+            background-color: var(--third-color);
+            width: 712px;
+            height: 417px;
+            top: 390px;
+            border-left: 0 solid;
+            border-top:  8px solid;
+            border-bottom: 8px solid;
+            border-right: 8px solid;
+        }
+        .container-3 img {
+            width: 720px;
+            height: 433px;
+            position: relative;
+            left: 720px;
+            bottom: 85px;
+        }
+        .container-3 p {
+            position: relative;
+
+            margin: 0;
+            top: 136px;
+            font-size: 64px;
+            left: 66px;
+            color: var(--first-color);
+        }
+        .section-lavanderia {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+            align-items: center;
+            column-gap: 100px;
+            row-gap: 80px;
+        }
+        .card1 {
+            position: relative;
+            width:345px;
+            height: 365px;
+            background-color: #D9D9D9;
+            top: 530px;
+            left: 75px;
+            border-radius: 20px;
+            transform-style: preserve-3d;
+        }
+        .card1:hover {
+            transform: rotateY(180deg);
+            transition: 1s;
+        }
+        .card {
+            width: 345px;
+            height: 365px;
+            position: absolute;
+            backface-visibility: hidden;
+        }
+        .card.back {
+            background: var(--second-color);
+            transform: rotateX(180deg);
+            border-radius: 20px;
+        }
+        .card.back p {
+            transform: rotate(180deg);
+            position: relative;
+            top: 146px;
+            display: flex;
+            justify-content: center;
+            font-size: 25px;
+        }
+        .card1 img {
+            position: relative;
+            width: 345px;
+            height: 365px;
+            border-radius: 20px;
+        }
+        .nota1 {
+            background-color: var(--five-color);
+            position: relative;
+            top: 567px;
+            left: 9px;
+            border-radius: 8px 8px 8px 8px;
+        }
+        .nota1 p {
+            color: var(--first-color);
+        }
+        .container-4 {
+            position: relative;
+
+
+            background-color: var(--four-color);
+            width: 712px;
+            height: 417px;
+            top: 720px;
+            border-left: 0 solid;
+            border-top:  8px solid;
+            border-bottom: 8px solid;
+            border-right: 8px solid;
+        }
+        .container-4 img {
+            width: 720px;
+            height: 433px;
+            position: relative;
+            left: 720px;
+            bottom: 85px;
+        }
+        .container-4 p {
+            position: relative;
+
+            margin: 0;
+            top: 166px;
+            font-size: 64px;
+            left: 136px;
+            color: var(--first-color);
+        }
+        .section-hogar {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+            align-items: center;
+            column-gap: 100px;
+            row-gap: 80px;
+        }
+        .card2 {
+            position: relative;
+            width:345px;
+            height: 365px;
+            background-color: #D9D9D9;
+            top: 830px;
+            left: 75px;
+            border-radius: 20px;
+            transform-style: preserve-3d;
+        }
+        .card2:hover {
+            transform: rotateY(180deg);
+            transition: 1s;
+        }    
+        .card2 img {
+            position: relative;
+            width: 345px;
+            height: 365px;
+            border-radius: 20px;
+        }
+        .nota2 {
+            background-color: var(--five-color);
+            position: relative;
+            top: 797px;
+            left: 9px;
+            border-radius: 8px 8px 8px 8px;
+        }
+        .nota2 p{
+            color: var(--first-color);
+        }
+        .contact {
+            width: 40%;
+            height: 700px;
+            background-color: var(--eight-color);
+            position: relative;
+            left: 450px;
+            top: 950px;
+            border-radius: 8px 8px 8px 8px;
+            background-color: rgba(0, 0, 0, 0.1);
+            border: 1px solid;
+            background-image: url(./ASSETS/img/image-contact.png);
+            background-size: cover;
+            box-shadow: 0 0 20px 1px rgba(0,0,0,0.3);
+
+        }
+        .contact h1 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            align-content: center;
+            flex-wrap: wrap;
+        }
+        input {
+            width: 300px;
+            height: 30px;
+            margin: 34px;
+        }
+        #button {
+            width: 20%;
+            position: relative;
+            left: 100px;
+            height: 50px;
+            bottom: 34px;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar_content">
+            <img src="./ASSETS/img/376272993_10159818243581376_4159435470244110655_n.jpeg" alt="logo">
+            <ul>
+                <a href="#inicio">INICIO</a>
+                <a href="#productos">PRODUCTOS</a>
+                <a href="#contactanos">CONTACTANOS</a>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="main-content" id="inicio">
+        <img src="./ASSETS/img/image-1.png" alt="image1" class="image1" id="image1">
+        <div class="container-1">
+
+        </div>
+        <div class="about-us">
+            <h1>NOSOTROS</h1>
+            <p>Somos una empresa que se dedica a la fabricación y<br> 
+               venta de productos de limpieza de marca propia para<br>
+               su uso industrial, comercial y de hogar, elaborados con<br>
+               la más alta calidad para una gran eficiencia en su<br>
+               aplicación.
+               <br>
+               <br>
+               Nuestros productos neutraliza malos olores y
+               bacterias<br>dejando una fragancia que dura todo el día.
+            </p>
+        </div>
+        <img src="./ASSETS/img/main-content.png" alt="image2" class="image2">
+        <div class="container-2">
+
+        </div>
+        <div class="container-3">
+            <p>LÍNEA LAVANDERÍA</p>
+            <img src="./ASSETS/img/linea-lavanderia.png" alt="image">
+        </div>
+    </section>
+    <section class="section-lavanderia" id="productos">
+        <div class="card1">
+            <div class="card front">
+                <img src="./ASSETS/img/Reforzador de aroma amanecer.jpeg" alt="image">
+            </div>
+            <div class="card back">
+                <p>Reforzador de aroma amanecer<br>1 L.</p>
+            </div>
+        </div>
+        <div class="card1">
+            <div class="card front">
+                <img src="./ASSETS/img/eliminador-de-manchas.jpeg" alt="image">
+            </div>
+            <div class="card back">
+                <p>Quita manchas 1 L.</p>
+            </div>
+        </div>
+        <div class="card1">
+            <div class="card front">
+                <img src="./ASSETS/img/Concentrado pino.jpeg" alt="image">
+            </div>
+            <div class="card back">
+                <p>Concentrado de pino 10 L.</p>
+            </div>
+        </div>
+        <div class="card1">
+            <div class="card front">
+                <img src="./ASSETS/img/Detergente biodegradable.jpeg" alt="image">
+            </div>
+            <div class="card back">
+                <p>Detergente biodegradable 1 L.</p>
+            </div>
+        </div>
+        <div class="card1">
+            <div class="card front">
+                <img src="./ASSETS/img/Detergente l´quido para ropa aroma más color.jpeg" alt="image">
+            </div>
+            <div class="card back">
+                <p>Detergente líquido para ropa<br>aroma más color 1 L.</p>
+            </div>
+        </div>
+        <div class="card1">
+            <div class="card front">
+                <img src="./ASSETS/img/Detergente zote.jpeg" alt="image">
+            </div>
+            <div class="card back">
+                <p>Detergente zote</p>
+            </div>
+        </div>
+        <div class="nota1">
+            <p>NOTA: LAS GARRAFAS A CAMBIO SOLO SE RECIBEN LIMPIAS Y SIN ETIQUETAS QUE NO SEAN DE LA EMPRESA, EN BUEN ESTADO Y NO DEBEN HABER SIDO RECIPIENTES DE SOLVENTES O ACEITE.</p>
+        </div>
+    </section>
+    <div class="container-4">
+        <p>LÍNEA HOGAR</p>
+        <img src="./ASSETS/img/hogar2.png" alt="image">
+    </div>
+    <section class="section-hogar">
+        <div class="card2">
+            <div class="card front">
+                <img src="./ASSETS/img/Aroma Ego.jpeg" alt="image">
+            </div>
+            <div class="card back">
+                <p>Aroma ego 500 ml</p>
+            </div>
+        </div>
+        <div class="card2">
+            <div class="card front">
+                <img src="./ASSETS/img/Shampoo de manos uva.jpeg" alt="image">
+            </div>
+            <div class="card back">
+                <p>Shampoo de manos uva 1 L.</p>
+            </div>
+        </div>
+        <div class="card2">
+            <div class="card front">
+                <img src="./ASSETS/img/Shampoo para vestiduras.jpeg" alt="image">
+            </div>
+            <div class="card back">
+                <p>Shampoo para vestiduras 500 ml</p>
+            </div>
+        </div>
+        <div class="card2">
+            <div class="card front">
+                <img src="./ASSETS/img/Lavatrastes.jpeg" alt="image">
+            </div>
+            <div class="card back">
+                <p>Lavatrastes 1 L.</p>
+            </div>
+        </div>
+        <div class="card2">
+            <div class="card front">
+                <img src="./ASSETS/img/Ajax amonia.jpeg" alt="image">
+            </div>
+            <div class="card back">
+                <p>Ajax amonia 1.5 L.</p>
+            </div>
+        </div>
+        <div class="nota2">
+            <p>NOTA: LAS GARRAFAS A CAMBIO SOLO SE RECIBEN LIMPIAS Y SIN ETIQUETAS QUE NO SEAN DE LA EMPRESA, EN BUEN ESTADO Y NO DEBEN HABER SIDO RECIPIENTES DE SOLVENTES O ACEITE.</p>
+        </div>
+    </section>
+    <section class="contact" id="contactanos">
+        <h1>Contáctanos</h1>
+            <form action="enviar.php" method="post">
+                <input type="text" name="nombre" placeholder="Nombre">
+                <input type="text" name="telefono" placeholder="Telefono">
+                <input type="text" name="email" placeholder="Email">
+                <input type="text" name="Mensaje" placeholder="Mensaje">
+                <input type="submit" name="enviar" value="Enviar" id="button">
+            </form>
+    </section>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/gsap.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/ScrollTrigger.min.js"></script>
+<script src="fresco-limpio.js"></script>
+</body>
+</html>
